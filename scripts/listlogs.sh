@@ -4,5 +4,5 @@ set -euo pipefail
 dir=${1:-.}
 cd ${dir}
 for f in *.log; do
-  echo $f
+  echo ${f}
 done
