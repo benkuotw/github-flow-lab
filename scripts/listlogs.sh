@@ -2,7 +2,8 @@
 set -euo pipefail
 
 dir=${1:-.}
-cd ${dir}
+cd "$dir"
 for f in *.log; do
-  echo ${f}
+  [[ -e "$f" ]] || continue
+  echo "$f"
 done
